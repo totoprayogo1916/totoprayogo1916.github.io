@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem 'sass'
-gem "github-pages", "~> 209", group: :jekyll_plugins
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
+gem "jekyll", "=3.9.0"
