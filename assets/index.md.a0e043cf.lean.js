@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.478f8120.js";const l=JSON.parse('{"title":"Blog punya Toto","description":"","frontmatter":{"title":"Blog punya Toto","subtext":"Tulisan sekedarnya"},"headers":[],"relativePath":"index.md"}'),o={name:"index.md"};function n(r,s,c,i,d,p){return a(),t("div")}const m=e(o,[["render",n]]);export{l as __pageData,m as default};
