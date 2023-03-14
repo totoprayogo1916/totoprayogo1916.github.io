@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Toto Ngeblog Maneh</title>
-        <link>https://totoprayogo.com</link>
+        <link>https://totoprayogo1916.github.io</link>
         <description>Gur blog biasa, koyo liyane</description>
-        <lastBuildDate>Tue, 14 Mar 2023 03:43:24 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Mar 2023 03:52:57 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>jv</language>
         <copyright>Copyright (c) 2023, Toto Prayogo</copyright>
         <item>
             <title><![CDATA[Mengembangkan MBlog]]></title>
-            <link>https://totoprayogo.com/posts/mengembangkan-mblog.html</link>
-            <guid>https://totoprayogo.com/posts/mengembangkan-mblog.html</guid>
+            <link>https://totoprayogo1916.github.io/posts/mengembangkan-mblog.html</link>
+            <guid>https://totoprayogo1916.github.io/posts/mengembangkan-mblog.html</guid>
             <pubDate>Mon, 13 Mar 2023 12:00:00 GMT</pubDate>
             <description><![CDATA[<p>Pernah ngeblog, tapi sayangnya selalu berhenti ditengah jalan seakan gak ada semangatnya untuk menulis blog.
 Mulai dari menggunakan Blogger, Wordpress dan berbagai macamnya. Semua berhenti karena hanya ingin mencoba fiturnya.</p>
@@ -25,8 +25,8 @@ Mulai dari menggunakan Blogger, Wordpress dan berbagai macamnya. Semua berhenti 
         </item>
         <item>
             <title><![CDATA[Codeigniter 4 : Bootstrap 4 template paginasi]]></title>
-            <link>https://totoprayogo.com/posts/codeigniter4-bootstrap-4-template-paginasi.html</link>
-            <guid>https://totoprayogo.com/posts/codeigniter4-bootstrap-4-template-paginasi.html</guid>
+            <link>https://totoprayogo1916.github.io/posts/codeigniter4-bootstrap-4-template-paginasi.html</link>
+            <guid>https://totoprayogo1916.github.io/posts/codeigniter4-bootstrap-4-template-paginasi.html</guid>
             <pubDate>Tue, 23 Jun 2020 12:00:00 GMT</pubDate>
             <description><![CDATA[<p>Begitu lama telah menggunakan CodeIgniter4, baru kali ini merasakan enak dan nyaman dalam mengatur sesuatunya dibandingkan
 pada versi CodeIgniter 3. Tapi pada tulisan ini yang jadi pokok bahasan adalah tentang template paginasi.</p>
