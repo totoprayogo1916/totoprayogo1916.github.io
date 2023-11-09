@@ -7,9 +7,9 @@
     <meta name="description" content="Blog ala kadarnya">
     <link rel="preload stylesheet" href="/assets/style.7c2a64cf.css" as="style">
     
-    <script type="module" src="/assets/app.ca010063.js"></script>
-    <link rel="modulepreload" href="/assets/chunks/framework.b2c54e7a.js">
-    <link rel="modulepreload" href="/assets/posts_instal-cacert-pem-pada-windows.md.477cd0df.lean.js">
+    <script type="module" src="/assets/app.a20ed041.js"></script>
+    <link rel="modulepreload" href="/assets/chunks/framework.621ffbf4.js">
+    <link rel="modulepreload" href="/assets/posts_instal-cacert-pem-pada-windows.md.118474bb.lean.js">
     <link rel="icon" type="image/svg+xml" href="/logo.svg">
     <script src="https://cdn.usefathom.com/script.js" data-site="NYHGSGQV" data-spa="auto" defer></script>
     <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
@@ -23,7 +23,7 @@
 <span class="line"></span>
 <span class="line"><span style="color:#6A737D;">; opsional</span></span>
 <span class="line"><span style="color:#D73A49;">openssl.cafile</span><span style="color:#24292E;">= </span><span style="color:#032F62;">&quot;C:\cacert.pem&quot;</span></span></code></pre></div><ol start="4"><li>Simpan file <em>php.ini</em> dan selesai, tutup perintah yang menjalankan server lalu jalankan ulang.</li><li>Untuk memeriksa apakah CA sudah aktif atau belum, buka terminal atau command prompt dan jalankan perintah <code>php -r &quot;var_dump(openssl_get_cert_locations());&quot;</code>. Jika outputnya mengandung path ke file <em>cacert.pem</em> yang sudah ditambahkan tadi, berarti CA sudah aktif.</li></ol><p>Dengan mengaktifkan CA, kita bisa menggunakan fitur-fitur PHP yang membutuhkan sertifikat SSL dengan lebih aman dan mudah, misalnya curl, <strong>file_get_contents</strong>, atau <strong>SOAPClient</strong>. Selain itu, kita juga bisa menghindari pesan error seperti SSL certificate problem: <em>unable to get local issuer certificate</em> atau <em>SSL operation failed with code 1</em> yang sering muncul saat menggunakan fitur-fitur tersebut tanpa CA.</p><p>Semoga bermanfaat!</p><p>Terimakasih.</p></div></div></div><footer class="text-sm font-medium leading-5 divide-y divide-gray-200 dark:divide-slate-200/5 xl:col-start-1 xl:row-start-2"><!----><div class="py-8"><h2 class="text-xs tracking-wide uppercase text-gray-500 dark:text-white"> Artikel sebelumnya </h2><div class="link"><a href="/posts/mengembangkan-mblog">Mengembangkan MBlog</a></div></div><div class="pt-8"><a class="link" href="/">← kembali ke halaman utama</a></div></footer></div></article></main></div></div>
-    <script>window.__VP_HASH_MAP__=JSON.parse("{\"index.md\":\"ebf40579\",\"posts_instal-cacert-pem-pada-windows.md\":\"477cd0df\",\"posts_mengembangkan-mblog.md\":\"6cbc7457\",\"posts_codeigniter4-bootstrap-4-template-paginasi.md\":\"4945d53a\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"id_ID\",\"dir\":\"ltr\",\"title\":\"Blog punya Toto\",\"description\":\"Blog ala kadarnya\",\"base\":\"/\",\"head\":[],\"appearance\":true,\"themeConfig\":{},\"locales\":{},\"scrollOffset\":90,\"cleanUrls\":true}");</script>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"posts_instal-cacert-pem-pada-windows.md\":\"118474bb\",\"index.md\":\"55b86680\",\"posts_mengembangkan-mblog.md\":\"6fe03cd2\",\"posts_codeigniter4-bootstrap-4-template-paginasi.md\":\"a070b44f\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"id_ID\",\"dir\":\"ltr\",\"title\":\"Blog punya Toto\",\"description\":\"Blog ala kadarnya\",\"base\":\"/\",\"head\":[],\"appearance\":true,\"themeConfig\":{},\"locales\":{},\"scrollOffset\":90,\"cleanUrls\":true}");</script>
     
   </body>
 </html>
