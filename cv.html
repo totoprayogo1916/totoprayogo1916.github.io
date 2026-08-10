@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Toto Prayogo - CV</title>
+<meta name="robots" content="index,follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:11pt;line-height:1.5;color:#1e293b;background:#f1f5f9}
+.wrap{max-width:900px;margin:32px auto;padding:0 16px}
+.page{background:#fff;padding:40px 48px;box-shadow:0 2px 16px rgba(0,0,0,.06)}
+
+/* top bar */
+.controls{display:flex;justify-content:flex-end;gap:6px;padding:8px 0 12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:6px 14px;border-radius:6px;font-size:11pt;font-weight:500;font-family:inherit;cursor:pointer;border:none;text-decoration:none;transition:all .15s}
+.btn-p{background:#2563eb;color:#fff}
+.btn-p:hover{background:#1d4ed8}
+.btn-o{background:transparent;color:#475569;border:1px solid #cbd5e1}
+.btn-o:hover{border-color:#94a3b8;background:#f8fafc}
+.btn-l{background:transparent;color:#475569;border:1px solid #cbd5e1;font-weight:600;min-width:42px;justify-content:center}
+.btn-l:hover{border-color:#2563eb;color:#2563eb}
+
+/* header */
+.hdr{border-bottom:2px solid #2563eb;padding-bottom:16px;margin-bottom:20px}
+.hdr h1{font-size:22pt;font-weight:800;color:#0f172a}
+.hdr .sub{font-size:11pt;color:#2563eb;font-weight:600;margin-top:2px}
+.hdr .meta{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:6px;font-size:9.5pt;color:#64748b}
+.hdr .meta a{color:#64748b;text-decoration:none}
+.hdr .meta a:hover{color:#2563eb}
+
+/* sections */
+.sec{margin-bottom:18px}
+.sec h2{font-size:10pt;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#2563eb;border-bottom:1px solid #e2e8f0;padding-bottom:4px;margin-bottom:10px}
+
+/* experience */
+.exp{padding-left:14px;border-left:1.5px solid #e2e8f0;padding-bottom:14px;margin-bottom:4px}
+.exp:last-child{padding-bottom:0}
+.exp h3{font-size:11pt;font-weight:600;color:#0f172a;position:relative}
+.exp h3::before{content:"";position:absolute;left:-18.5px;top:5px;width:8px;height:8px;border-radius:50%;background:#2563eb;border:1.5px solid #fff;box-shadow:0 0 0 1.5px #2563eb}
+.exp .co{font-size:10pt;color:#2563eb;font-weight:500}
+.exp .dt{font-size:9pt;color:#94a3b8;margin:1px 0 5px}
+.exp ul{list-style:none;padding-left:0}
+.exp ul li{font-size:9.5pt;color:#475569;position:relative;padding-left:12px;margin-bottom:2px}
+.exp ul li::before{content:"";position:absolute;left:0;top:7px;width:3.5px;height:3.5px;border-radius:50%;background:#94a3b8}
+
+/* skills */
+.sk{display:flex;flex-wrap:wrap;gap:10px}
+.sk>div{flex:1 1 200px}
+.sk h4{font-size:9.5pt;font-weight:600;color:#0f172a;margin-bottom:4px}
+.sk .t{display:flex;flex-wrap:wrap;gap:3px}
+.sk .t span{background:#eef2ff;color:#1d4ed8;padding:2px 9px;border-radius:10px;font-size:8.5pt;font-weight:500}
+
+/* projects */
+.pj{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pj>div{padding:8px 10px;border:1px solid #e2e8f0;border-radius:6px}
+.pj .t{font-size:10pt;font-weight:600;color:#0f172a}
+.pj .tc{font-size:8.5pt;color:#94a3b8;margin:1px 0 2px}
+.pj .d{font-size:9pt;color:#475569}
+.pj .l{margin-top:4px}
+.pj .l a{font-size:9pt;color:#2563eb;text-decoration:none;font-weight:500}
+.pj .l a:hover{text-decoration:underline}
+.pj .i{font-size:9pt;color:#94a3b8;font-style:italic}
+.pm{font-size:9.5pt;margin-top:10px;color:#64748b}
+.pm a{color:#2563eb;text-decoration:none;font-weight:500}
+
+/* education */
+.edu{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #f1f5f9}
+.edu:last-child{border-bottom:none;padding-bottom:0}
+.edu .d{font-size:10pt;font-weight:600;color:#0f172a}
+.edu .s{font-size:9.5pt;color:#64748b}
+.edu .dtl{font-size:9pt;color:#94a3b8;margin-top:1px}
+
+/* note */
+#note{display:none;position:fixed;top:0;left:0;right:0;background:#2563eb;color:#fff;padding:12px;text-align:center;font-size:11pt;z-index:1001}
+#note button{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;padding:3px 10px;border-radius:5px;cursor:pointer;margin-left:8px;font-family:inherit;font-size:10pt}
+
+@media print{
+  @page{margin:.3in;size:A4}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;font-size:9pt;line-height:1.35}
+  .wrap{margin:0;padding:0;max-width:100%}
+  .page{box-shadow:none;padding:0}
+  .controls,#note,.btn{display:none!important}
+  .hdr h1{font-size:16pt}
+  .hdr .meta{display:block;font-size:8pt;white-space:nowrap}
+  .hdr .meta>*{display:inline;margin-right:16px}
+  .sec h2{font-size:9pt}
+  .exp h3{font-size:10pt}
+  .exp ul li,.exp .co,.exp .dt{font-size:8.5pt}
+  .sk>div{flex:1 1 180px}
+  .sk h4{font-size:9pt}
+  .sk .t span{font-size:8pt}
+  .pj{display:flex;flex-wrap:wrap;gap:6px}
+  .pj>div{width:calc(50% - 3px);padding:5px 8px}
+  .pj .t{font-size:9pt}
+  .pj .tc,.pj .d,.pj .l a,.pj .i{font-size:8pt}
+  .edu .d{font-size:9.5pt}
+  .edu .s,.edu .dtl{font-size:8.5pt}
+  .pm{font-size:8.5pt}
+}
+@media(max-width:700px){
+  .page{padding:24px 20px}
+  .pj{grid-template-columns:1fr}
+  .hdr .meta{flex-direction:column;gap:2px}
+  .controls{justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="controls">
+<button class="btn btn-l" id="lang-btn" onclick="toggle()">EN</button>
+<button class="btn btn-p" onclick="window.print()">
+<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:14px;height:14px"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+      <span>Download PDF</span>
+</button>
+<a href="https://linkedin.com/in/totoprayogo" target="_blank" class="btn btn-o" style="background:#0a66c2;color:#fff;border:none">LinkedIn</a>
+<a href="https://wa.me/6285158448900" target="_blank" class="btn btn-o" style="background:#25d366;color:#fff;border:none">WhatsApp</a>
+
+</div>
+
+<div class="page">
+<div class="hdr">
+<h1>Toto Prayogo</h1>
+<div class="sub">Backend or Fullstack Developer</div>
+<div class="meta">
+<span>ttpryg@gmail.com</span>
+<span>+62 851-5844-8900</span>
+      <span>D.I. Yogyakarta, Indonesia</span>
+<a href="https://github.com/totoprayogo1916" target="_blank">github.com/totoprayogo1916</a>
+</div>
+</div>
+
+<div class="sec">
+<h2 data-i18n="about">About</h2>
+<p data-i18n="about-txt" style="font-size:9.5pt;color:#475569;line-height:1.65">
+Professional in web application development with expertise in PHP (CodeIgniter, Laravel, Slim), JavaScript, jQuery, Vue.js, and Bootstrap. Experienced in designing and implementing complex features including transaction systems, balance management, API integration, and database-driven data management. Strong attention to detail, application security, and code efficiency.
+</p>
+</div>
+
+<div class="sec">
+<h2 data-i18n="exp">Experience</h2>
+
+<div class="exp">
+<h3>Backend Programmer</h3>
+<div class="co">PT Esoftdream Solusi Bisnis</div>
+<div class="dt">Dec 2023 - <span data-i18n="pres">Present</span> &middot; Yogyakarta, Indonesia</div>
+<ul>
+<li data-i18n="e1a">Build, develop and maintain web applications</li>
+<li data-i18n="e1b">Designed and developed microservices</li>
+<li data-i18n="e1c">Collaborated with cross-functional teams</li>
+</ul>
+</div>
+
+<div class="exp">
+<h3>Backend Programmer</h3>
+<div class="co">Nortale LLC</div>
+<div class="dt">Jan 2022 - Aug 2023 &middot; Remote - US</div>
+<ul>
+<li data-i18n="e2a">Built web applications using CodeIgniter 4 framework</li>
+<li data-i18n="e2b">Improved system performance and reduced response time</li>
+</ul>
+</div>
+
+<div class="exp">
+<h3>Fullstack Programmer</h3>
+<div class="co">Nortale LLC</div>
+<div class="dt">Dec 2020 - Aug 2021 &middot; Remote - US</div>
+<ul>
+<li data-i18n="e3a">Built web applications using CodeIgniter 4 framework</li>
+<li data-i18n="e3b">Integrated third-party services</li>
+</ul>
+</div>
+
+<div class="exp">
+<h3>Fullstack Programmer</h3>
+<div class="co">Twelve Inc.</div>
+<div class="dt">May 2015 - Oct 2022 &middot; Yogyakarta, Indonesia</div>
+<ul>
+<li data-i18n="e4a">Built and maintained web applications with CodeIgniter 3 &amp; 4</li>
+<li data-i18n="e4b">Developed and maintained Blogger &amp; Wordpress platforms</li>
+<li data-i18n="e4c">Developed Android applications</li>
+</ul>
+</div>
+
+<div class="exp">
+<h3>Fullstack Programmer</h3>
+<div class="co">Seven Inc.</div>
+<div class="dt">Oct 2013 - Dec 2014 &middot; Yogyakarta, Indonesia</div>
+<ul>
+<li data-i18n="e5a">Rebuilt and maintained websites using PHP native</li>
+<li data-i18n="e5b">Worked with CodeIgniter 2 &amp; 3, Blogger, and WordPress</li>
+<li data-i18n="e5c">Managed projects from planning to deployment</li>
+</ul>
+</div>
+</div>
+
+<div class="sec">
+<h2 data-i18n="skills">Skills</h2>
+<div class="sk">
+<div><h4>Backend</h4><div class="t"><span>PHP</span><span>CodeIgniter</span><span>Laravel</span><span>Slim</span></div></div>
+<div><h4>Frontend</h4><div class="t"><span>JavaScript</span><span>jQuery</span><span>Vue.js</span><span>HTML5</span><span>CSS/SCSS</span></div></div>
+<div><h4>Database</h4><div class="t"><span>MySQL</span><span data-i18n="data-mgmt">Data Management</span></div></div>
+<div><h4>Tools</h4><div class="t"><span>Git</span><span>Bootstrap</span><span>Tailwind CSS</span><span data-i18n="api-int">API Integration</span></div></div>
+</div>
+</div>
+
+<div class="sec">
+<h2 data-i18n="projects">Projects</h2>
+<div class="pj">
+<div><div class="t">Web POS</div><div class="tc">PHP, CI4, Bootstrap 4, jQuery</div><div class="d" data-i18n="pj-pos">Point of Sale system for retail businesses</div><div class="l"><a href="https://www.djuragan.com" target="_blank">djuragan.com &rarr;</a></div></div>
+<div><div class="t">Attendance System</div><div class="tc">CI3 &rarr; CI4, Bootstrap 4, jQuery</div><div class="d" data-i18n="pj-att">Employee attendance tracking system</div><div class="l"><a href="https://presensi.djuragan.com" target="_blank">presensi.djuragan.com &rarr;</a></div></div>
+<div><div class="t">Web Reseller System</div><div class="tc">CI3, Materialize CSS, jQuery</div><div class="d" data-i18n="pj-res">Reseller management system</div><div class="l"><a href="https://bisnismahasiswa.in" target="_blank">bisnismahasiswa.in &rarr;</a></div></div>
+<div><div class="t">Prakerja App</div><div class="tc">CI4, jQuery, Bootstrap</div><div class="d" data-i18n="pj-prak">Application for the Prakerja program</div><div class="i" data-i18n="int">Internal</div></div>
+<div><div class="t">Lawyer Referral System</div><div class="tc">CI4, jQuery, Bootstrap</div><div class="d" data-i18n="pj-law">Lawyer referral system</div><div class="i" data-i18n="int">Internal</div></div>
+<div><div class="t">Company Profile</div><div class="tc">CI3, Bootstrap, jQuery</div><div class="d" data-i18n="pj-cp">Training board profile website</div><div class="l"><a href="https://dewandik.slemankab.go.id" target="_blank">dewandik.slemankab.go.id &rarr;</a></div></div>
+<div><div class="t">Job Board System</div><div class="tc">CI3, jQuery</div><div class="d" data-i18n="pj-jb">Job board system</div><div class="i" data-i18n="int">Internal</div></div>
+<div><div class="t">Job Tracking System</div><div class="tc">CI4, Bootstrap 4, jQuery</div><div class="d" data-i18n="pj-jt">Job tracking system</div><div class="i" data-i18n="int">Internal</div></div>
+</div>
+<p class="pm"><span data-i18n="more">See more projects at</span> <a href="https://totoprayogo1916.github.io/projects" target="_blank">totoprayogo1916.github.io &rarr;</a></p>
+</div>
+
+<div class="sec">
+<h2 data-i18n="edu">Education</h2>
+<div class="edu">
+<div><div class="d">Bachelor of Informatics Engineering</div><div class="s">STMIK Amikom Yogyakarta &middot; 2007 - 2014</div><div class="dtl">GPA 3.05 &middot; Software Engineering, Data Structures &amp; Algorithms</div></div>
+</div>
+<div class="edu">
+<div><div class="d">SMA N 1 Cangkringan</div><div class="s">2004 - 2007 &middot; Yogyakarta</div><div class="dtl" data-i18n="major">Science Major</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="note">
+<strong data-i18n="note-t">Save as PDF:</strong> <span data-i18n="note-txt">Tap share in your browser, then "Print" or "Save as PDF"</span>
+<button onclick="this.parentElement.style.display='none'"><span data-i18n="close">Close</span></button>
+</div>
+
+<script>
+const dict={
+dl:{id:'Download PDF',en:'Download PDF'},
+about:{id:'Tentang Saya',en:'About'},
+'about-txt':{id:'Profesional dalam pengembangan aplikasi web dengan keahlian di PHP (CodeIgniter, Laravel, Slim), JavaScript, jQuery, Vue.js, dan Bootstrap. Berpengalaman dalam merancang dan mengimplementasikan berbagai fitur kompleks, mulai dari sistem transaksi dan manajemen saldo, integrasi API, hingga manajemen data berbasis database. Memiliki perhatian kuat terhadap detail, keamanan aplikasi, dan efisiensi kode.',en:'Professional in web application development with expertise in PHP (CodeIgniter, Laravel, Slim), JavaScript, jQuery, Vue.js, and Bootstrap. Experienced in designing and implementing complex features including transaction systems, balance management, API integration, and database-driven data management. Strong attention to detail, application security, and code efficiency.'},
+exp:{id:'Pengalaman',en:'Experience'},
+pres:{id:'Sekarang',en:'Present'},
+e1a:{id:'Membangun, mengembangkan, dan memelihara aplikasi web',en:'Build, develop and maintain web applications'},
+e1b:{id:'Merancang dan mengembangkan microservices',en:'Designed and developed microservices'},
+e1c:{id:'Berkolaborasi dengan tim lintas fungsi',en:'Collaborated with cross-functional teams'},
+e2a:{id:'Membangun aplikasi web menggunakan framework CodeIgniter 4',en:'Built web applications using CodeIgniter 4 framework'},
+e2b:{id:'Meningkatkan performa sistem dan mengurangi waktu respons',en:'Improved system performance and reduced response time'},
+e3a:{id:'Membangun aplikasi web menggunakan framework CodeIgniter 4',en:'Built web applications using CodeIgniter 4 framework'},
+e3b:{id:'Mengintegrasikan layanan pihak ketiga',en:'Integrated third-party services'},
+e4a:{id:'Membangun dan memelihara aplikasi web dengan CodeIgniter 3 & 4',en:'Built and maintained web applications with CodeIgniter 3 & 4'},
+e4b:{id:'Mengembangkan dan memelihara platform Blogger & Wordpress',en:'Developed and maintained Blogger & Wordpress platforms'},
+e4c:{id:'Mengembangkan aplikasi Android',en:'Developed Android applications'},
+e5a:{id:'Membangun ulang dan memelihara website menggunakan PHP native',en:'Rebuilt and maintained websites using PHP native'},
+e5b:{id:'Bekerja dengan CodeIgniter 2 & 3, Blogger, dan WordPress',en:'Worked with CodeIgniter 2 & 3, Blogger, and WordPress'},
+e5c:{id:'Mengelola proyek dari perencanaan hingga deployment',en:'Managed projects from planning to deployment'},
+skills:{id:'Keahlian',en:'Skills'},
+'data-mgmt':{id:'Manajemen Data',en:'Data Management'},
+'api-int':{id:'Integrasi API',en:'API Integration'},
+projects:{id:'Proyek',en:'Projects'},
+'pj-pos':{id:'Sistem Point of Sale untuk bisnis ritel',en:'Point of Sale system for retail businesses'},
+'pj-att':{id:'Sistem presensi karyawan',en:'Employee attendance tracking system'},
+'pj-res':{id:'Sistem manajemen reseller',en:'Reseller management system'},
+'pj-prak':{id:'Aplikasi untuk program Prakerja',en:'Application for the Prakerja program'},
+'pj-law':{id:'Sistem rujukan pengacara',en:'Lawyer referral system'},
+'pj-cp':{id:'Website profil dewan diklat',en:'Training board profile website'},
+'pj-jb':{id:'Sistem papan lowongan kerja',en:'Job board system'},
+'pj-jt':{id:'Sistem tracking pekerjaan',en:'Job tracking system'},
+int:{id:'Internal',en:'Internal'},
+more:{id:'Lihat proyek lainnya di',en:'See more projects at'},
+edu:{id:'Pendidikan',en:'Education'},
+major:{id:'Jurusan IPA',en:'Science Major'},
+'note-t':{id:'Simpan sebagai PDF:',en:'Save as PDF:'},
+'note-txt':{id:'Ketuk tombol bagikan di browser, lalu pilih "Cetak" atau "Simpan sebagai PDF"',en:'Tap share in your browser, then "Print" or "Save as PDF"'},
+close:{id:'Tutup',en:'Close'}
+}
+let lang=localStorage.getItem('cv-lang')||'id'
+function apply(l){
+document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(dict[k]&&dict[k][l])el.textContent=dict[k][l]})
+document.getElementById('lang-btn').textContent=l==='id'?'EN':'ID'
+document.documentElement.lang=l
+lang=l
+localStorage.setItem('cv-lang',l)
+}
+function toggle(){apply(lang==='id'?'en':'id')}
+apply(lang)
+const m=/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<=768
+if(m){document.querySelector('.btn-p').innerHTML='<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:14px;height:14px"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> <span data-i18n="dl">Save PDF</span>';apply(lang)}
+window.addEventListener("beforeprint",()=>document.getElementById("note").style.display="none")
+window.addEventListener("afterprint",()=>{document.getElementById("note").style.display="none"})
+</script>
+</body>
+</html>
